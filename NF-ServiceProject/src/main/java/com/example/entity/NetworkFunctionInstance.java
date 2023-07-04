@@ -1,15 +1,11 @@
 package com.example.entity;
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToOne;
+
+import javax.persistence.*;
 
 import org.hibernate.annotations.GenericGenerator;
+import com.example.util.NFInstanceType;
+import com.example.util.NFStatus;
 
-import jakarta.persistence.CascadeType;
 
 @Entity
 public class NetworkFunctionInstance {
@@ -26,11 +22,11 @@ public class NetworkFunctionInstance {
 	@Enumerated(EnumType.STRING)
 	private NFStatus status;
 	
-	@Enumerated(EnumType.STRING)
+	
 	private int heartBeatTimer;
 	
-	@OneToOne(cascade=CascadeType.ALL)
-	private NfProfile nfProfile;
+	//@OneToOne(cascade=CascadeType.ALL)
+	//private NfProfile nfProfile;
 
 	public NetworkFunctionInstance() {
 		super();
@@ -43,7 +39,7 @@ public class NetworkFunctionInstance {
 		this.networkFunctionInstanceType = networkFunctionInstanceType;
 		this.status = status;
 		this.heartBeatTimer = heartBeatTimer;
-		this.nfProfile = nfProfile;
+		//this.nfProfile = nfProfile;
 	}
 
 	public String getNetworkFunctionInstanceId() {
@@ -78,13 +74,11 @@ public class NetworkFunctionInstance {
 		this.heartBeatTimer = heartBeatTimer;
 	}
 
-	public NfProfile getNfProfile() {
-		return nfProfile;
-	}
-
-	public void setNfProfile(NfProfile nfProfile) {
-		this.nfProfile = nfProfile;
-	}
+	/*
+	 * public NfProfile getNfProfile() { return nfProfile; }
+	 * 
+	 * public void setNfProfile(NfProfile nfProfile) { this.nfProfile = nfProfile; }
+	 */
 
 	@Override
 	public String toString() {

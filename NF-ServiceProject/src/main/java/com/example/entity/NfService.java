@@ -1,13 +1,10 @@
 package com.example.entity;
 
 import org.hibernate.annotations.GenericGenerator;
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.example.util.NFServiceName;
+import com.example.util.NFServiceStatus;
+import com.example.util.Scheme;
+import javax.persistence.*;
 
 @Entity
 public class NfService {
