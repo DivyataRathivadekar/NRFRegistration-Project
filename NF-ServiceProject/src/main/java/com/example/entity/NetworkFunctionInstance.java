@@ -13,7 +13,7 @@ import jakarta.persistence.CascadeType;
 
 @Entity
 public class NetworkFunctionInstance {
-
+//This is nfinstance class
 	@Id
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="sequence-generator")
 	@GenericGenerator(name = "sequence-generator",
