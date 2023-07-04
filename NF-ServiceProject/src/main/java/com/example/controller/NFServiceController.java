@@ -5,6 +5,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.util.MappingConstants;
 
+// This is controller 
+
 @RestController
 @RequestMapping(value = MappingConstants.NFInstanceUri)
 public class NFServiceController {
